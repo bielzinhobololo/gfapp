@@ -49,8 +49,8 @@ if file is not None:
     st.session_state.uploaded_file = file
 
 # Exemplos online
-ex1_url = "https://drive.google.com/uc?export=view&id=1siXyVhDnAWkywBm8xkILdiwLSfQnO_hS"
-ex2_url = "https://drive.google.com/uc?export=view&id=1AtF60mt04DIvfvM6uNVSFAdRa-DofEEH"
+ex1_url = "https://media.istockphoto.com/id/537619812/pt/foto/bacterianas-e-f%C3%BAngicas-col%C3%B3nias-em-%C3%A1gar-placa-isolado-num-preto.jpg?s=612x612&w=0&k=20&c=JRt2lYxx_K_37oVqOMuylVtaqVRtDYDDJx6DqlnoTxw="
+ex2_url = "https://media.istockphoto.com/id/2188355855/pt/foto/growing-bacteria-and-fungus-colonies-in-petri-dish.jpg?s=612x612&w=0&k=20&c=wLkc3BfgIDM21JZ57aSvpKTNpKI2i3QxBUVVZ_ehv24="
 
 st.markdown("### Exemplos disponíveis")
 col1, col2 = st.columns(2)
@@ -75,7 +75,6 @@ if st.button("Enviar imagem para análise"):
         st.error("Por favor, selecione ou carregue uma imagem.")
     else:
         img_bytes = st.session_state.uploaded_file
-        # se for upload local, img_bytes é bytes; se veio do requests, já é bytes
         if not isinstance(img_bytes, bytes):
             img_bytes = img_bytes.read()
 
