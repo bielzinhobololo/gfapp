@@ -1,4 +1,4 @@
-isso tudo aq vc precisa baixar CASO for rodar o app no seu computador, caso for pelo site mesmo, so ignorar
+# isso tudo aq vc precisa baixar CASO for rodar o app no seu computador, caso for pelo site mesmo, so ignorar
 
 
 altair==5.5.0
