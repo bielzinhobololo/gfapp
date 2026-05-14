@@ -4,9 +4,8 @@ from PIL import Image, ImageDraw, ImageFont
 import streamlit as st
 import pandas as pd
 
-# -------------------------
 # CONFIGURAÇÃO DO APP
-# -------------------------
+
 st.set_page_config(
     page_title="GfApp - Leitura de Meios de Cultura",
     layout="centered",
@@ -43,12 +42,12 @@ st.markdown(
     "</div>", unsafe_allow_html=True
 )
 
-# Upload de imagem
+# Enviar imagi
 file = st.file_uploader("Selecione uma imagem para análise:", type=["jpg","jpeg","png"])
 if file is not None:
     st.session_state.uploaded_file = file
 
-# Exemplos online
+# Exemplos da imagi
 ex1_url = "https://media.istockphoto.com/id/537619812/pt/foto/bacterianas-e-f%C3%BAngicas-col%C3%B3nias-em-%C3%A1gar-placa-isolado-num-preto.jpg?s=612x612&w=0&k=20&c=JRt2lYxx_K_37oVqOMuylVtaqVRtDYDDJx6DqlnoTxw="
 ex2_url = "https://media.istockphoto.com/id/2188355855/pt/foto/growing-bacteria-and-fungus-colonies-in-petri-dish.jpg?s=612x612&w=0&k=20&c=wLkc3BfgIDM21JZ57aSvpKTNpKI2i3QxBUVVZ_ehv24="
 
@@ -69,7 +68,7 @@ with col2:
         st.session_state.uploaded_file = requests.get(ex2_url).content
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Processamento
+# o back end sinistro
 if st.button("Enviar imagem para análise"):
     if st.session_state.uploaded_file is None:
         st.error("Por favor, selecione ou carregue uma imagem.")
@@ -114,4 +113,6 @@ if st.button("Enviar imagem para análise"):
                     st.image(pil_img, width="stretch")
         except Exception as e:
             st.error(f"Ocorreu um erro: {e}")
+
+# o dodigo mais sinistro q tem mt aura slk
 
